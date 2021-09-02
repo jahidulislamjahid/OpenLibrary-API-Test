@@ -8,16 +8,19 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- custom style  -->
     <style>
         body {
             background-color: rgb(225, 220, 197);
         }
     </style>
+    <!-- title  -->
     <title>Book Archive</title>
 </head>
 
 <body>
     <header>
+        <!-- navigation bar  -->
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
@@ -46,15 +49,21 @@
                                 </ul>
                             </li>
                         </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+                        <!-- search bar  -->
+                        <div class="d-flex">
+                            <input class="form-control me-2" id="searchText" type="text" placeholder="Search"
+                                aria-label="Search">
+                            <button onclick="searchBook()" class="btn btn-outline-success">Search</button>
+                        </div>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
+    <main>
+        <h3 id="booksFound" class="text-center mt-4"></h3>
+        <div id="searchResult" class="row row-cols-1 row-cols-md-4 g-4 my-3 px-2"></div>
+    </main>
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
